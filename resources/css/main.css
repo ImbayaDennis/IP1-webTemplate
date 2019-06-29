@@ -1,0 +1,273 @@
+/*Declaring and initializing variables*/
+:root
+{
+    --main-color: #19c227;
+    --main-white: #ffffff;
+    --main-black: #000;
+    --main-black-trans: rgba(0, 0, 0, 0.8);
+    --main-white-trans: rgba(255, 255, 255, 0.8);
+    --main-font: 'Roboto Mono', Monospace;
+    --sub-font: 'Montserrat', sans-serif;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    background: linear-gradient(var(--main-black-trans), var(--main-black-trans)), url(../imgs/hero.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: var(--main-font);
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--main-white);
+    padding: 0;
+    margin: 0;
+}
+
+.logo-mob
+{
+    display: none;
+}
+
+.logo
+{
+    position: fixed;
+    font-family: var(--sub-font);
+    float: left;
+    margin: 1% 2%;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.logo.dark
+{
+    color: #000;
+}
+
+section
+{
+    min-height: 100vh;
+    display: none;
+}
+
+section::before
+{
+    content: '';
+    width: 100%;
+    height: 50px;
+    display: block;
+}
+
+header
+{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+}
+
+header.dark
+{
+    background: var(--main-white);
+    color: var(--main-black);
+}
+
+#header
+{
+    background: linear-gradient(var(--main-black-trans), var(--main-black-trans)), url(../imgs/hero2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+a
+{
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+}
+
+h1, h2, h3
+{
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+ul
+{
+    list-style: none;
+}
+
+nav
+{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 50;
+    text-transform: uppercase;
+}
+
+nav ul
+{
+    overflow: hidden;
+    color: #000;
+    padding: 0;
+    text-align: right;
+    margin: 0;
+    transition: 500ms;
+}
+
+nav ul li
+{
+    display: inline-block;
+    padding: 1%;
+}
+
+nav a
+{
+    color: var(--main-white);
+    font-weight: 500;
+    transition: all 500ms;
+}
+
+nav a:hover
+{
+    color: var(--main-color);
+}
+
+nav.dark a
+{
+    color: var(--main-black);
+}
+
+nav.dark a:hover
+{
+    color: var(--main-color);
+}
+
+h1, h2, h3
+{
+    font-weight: 300;
+}
+
+.hero-text
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--main-white);
+}
+
+.container
+{
+    max-width: 80%;
+    margin: auto;
+}
+
+.rows
+{
+    width: 100%;
+    height: 100px;
+}
+
+img
+{
+    width: 100%
+}
+
+form input,textarea
+{
+    width: 70%;
+    padding: 10px;
+    margin: 15px;
+    font-weight: 300;
+    font-family: var(--main-font);
+    font-size: 20px;
+    background: var(--main-black-trans);
+    color: var(--main-white);
+    border: solid 1px var(--main-white);
+}
+
+.button
+{
+    text-transform: uppercase;
+    border: solid 1px var(--main-white);
+    border-radius: 200px;
+    font-weight: 500;
+    padding: 10px;
+    margin: 15px;
+    color: var(--main-white);
+    background: var(--main-black-trans);
+    cursor: pointer;
+    transition: all 500ms;
+}
+
+.button:hover
+{
+    color: var(--main-color);
+    border: solid 1px var(--main-color);
+}
+
+@media only screen and (max-width: 700px)
+{
+    .logo
+    {
+        display: none;
+    }
+    .logo-mob
+    {
+        display: block;
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        position: fixed;
+        cursor: pointer;
+        z-index: 60;
+        transition: all 500ms;
+    }
+
+    .logo-mob.dark
+    {
+        color: var(--main-black);
+    }
+
+    nav ul
+    {
+        max-height: 0px;
+        background: #fff;
+    }
+
+    nav ul li a
+    {
+        color: #000;
+    }
+
+    nav.black ul
+    {
+        background: #fff;
+    }
+
+    .showing
+    {
+        max-height: 20em;
+    }
+
+    nav ul li
+    {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 24px;
+        text-align: center;
+        margin: 0;
+        transition: 500ms;
+    }
+}
